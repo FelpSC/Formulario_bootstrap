@@ -9,10 +9,30 @@ footer{
     box-sizing: border-box;
 }
 footer img{
-    width: 160px;
+    width: 200px;
     height: 80px;
 }
 
 .info-form{
     height: 400px;
 }
+
+.dropdown{
+    border: none;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 80px;
+    
+}
+
+
+button{
+    border: none;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 80px;
+    
+}
+
