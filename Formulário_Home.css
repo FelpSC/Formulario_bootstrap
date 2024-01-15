@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer img{
+    width: 160px;
+    height: 80px;
+}
+
+.info-form{
+    height: 400px;
+}
