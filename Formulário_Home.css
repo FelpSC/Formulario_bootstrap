@@ -1,37 +1,39 @@
 
 body{
-    display: block;
-    margin: 8px;
     background-color:whitesmoke
 }
 
 header{
-    width: 100%;
-    display: flex;
     height: 75px;
     background-color: black;
     border: 1px solid wheat;
 
 }
+.container{
+    display: flex;
+}   
 .invisible{
-    height: 75px;
+    height: 75px    ;
 }
 .dropdown{
     margin-right: 50px;
+    height: 20px;
+    border: none;
   
 }
 .produtor{
-    font-size: 12px;
-    position: relative;
+    width: 150px;
     left: 40px;
     text-decoration: none;
 }
-.produtor h2{
-    font-size: 18px;
+.produtor p{
+    margin-top: 10px;
+    font-size: 12px;
     color: whitesmoke;
     
 
 }
+
 header img{
     margin-left: 50px;
     width: 120px;
@@ -47,10 +49,33 @@ header img{
 }
 
 footer{
-    position: relative;
     width: 100%;
-    height: 200px;
     text-align: center;
+    height: 200px;
+    
+}
+
+.subtitulo{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div{
+}
+
+.info-form{
+    height: 900px;
+
+}
+
+form h3{
+    position: relative;
+    top:25px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    opacity: 80%;
+   
     
 }
 
