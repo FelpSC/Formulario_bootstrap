@@ -1,6 +1,10 @@
-
 body{
-    background-color:whitesmoke;
+    /* background-image: url(img/ideias-lapis-lateral.jpg);
+    background-repeat: no-repeat;
+    background-position: cover; */
+    
+    background-color: whitesmoke;
+
     
 }
 
@@ -42,7 +46,6 @@ header img{
 
 .info-form{
     height: 2000px;
-    background-color: white;
     color: gray;
     border: 0.5px solid gray;
     border-radius: 6px;
@@ -60,8 +63,7 @@ footer{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-div{
-}
+
 
 .info-form{
     height: 900px;
