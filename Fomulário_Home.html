@@ -41,28 +41,90 @@
             <div class="ms-2 col-12 p-3 pt-4">
                 <h2 class="subtitulo text-primary">Insira as Informações do Seu <span class="text-black">Evento:</span></h2>
                 <form>
-                    <div class="mb-3">
-                        <h3 class="ms-2">Local</h3>
+                    <div class="mb-2">
+                        <label class="form-label p-2 text-dark">Selecione um Local Pré-Definido</label>
+                        <select class="form-select" id="local" name="local">
+                            <option value="">Novo Local</option>
+                            <option value="">Não Definido</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <h3 class="text-center p-2 mb-4 border-bottom border-black">Cadastre o Novo Endreço</h3>
+
+                    <div class="mb-2" > 
+                        <h3  class="ms-2">Nome da Casa/Local</h3>
+                        <label for="" class="form-label"></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    
+                    <div class="mb-2">
+                        <h3  class="ms-2">CEP</h3>
                         <label for="" class="form-label"></label>
                         <input type="text" class="form-control">
                     </div>
 
-                    <div class="mb-3">
-                        <h3  class="ms-2">Local</h3>
+                    <div class="mb-2">
+                        <h3  class="ms-2">Rua</h3>
                         <label for="" class="form-label"></label>
                         <input type="text" class="form-control">
                     </div>
 
-                    <div class="mb-3" >
-                        <h3  class="ms-2">Local</h3>
+                    <div class="mb-2">
+                        <h3  class="ms-2">Número</h3>
                         <label for="" class="form-label"></label>
                         <input type="text" class="form-control">
                     </div>
 
-                    <div class="mb-3">
-                        <h3  class="ms-2">Local</h3>
+                    <div class="mb-2">
+                        <h3  class="ms-2">Complemento</h3>
                         <label for="" class="form-label"></label>
                         <input type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-2">
+                        <h3  class="ms-2">Bairro</h3>
+                        <label for="" class="form-label"></label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-2">
+                        <h3  class="ms-2">Cidade</h3>
+                        <label for="" class="form-label"></label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="estados" class="form-label">Selecione um estado:</label>
+                        <select class="form-select" id="estados" name="estados">
+                          <option value="AC">Acre</option>
+                          <option value="AL">Alagoas</option>
+                          <option value="AP">Amapá</option>
+                          <option value="AM">Amazonas</option>
+                          <option value="BA">Bahia</option>
+                          <option value="CE">Ceará</option>
+                          <option value="DF">Distrito Federal</option>
+                          <option value="ES">Espírito Santo</option>
+                          <option value="GO">Goiás</option>
+                          <option value="MA">Maranhão</option>
+                          <option value="MT">Mato Grosso</option>
+                          <option value="MS">Mato Grosso do Sul</option>
+                          <option value="MG">Minas Gerais</option>
+                          <option value="PA">Pará</option>
+                          <option value="PB">Paraíba</option>
+                          <option value="PR">Paraná</option>
+                          <option value="PE">Pernambuco</option>
+                          <option value="PI">Piauí</option>
+                          <option value="RJ">Rio de Janeiro</option>
+                          <option value="RN">Rio Grande do Norte</option>
+                          <option value="RS">Rio Grande do Sul</option>
+                          <option value="RO">Rondônia</option>
+                          <option value="RR">Roraima</option>
+                          <option value="SC">Santa Catarina</option>
+                          <option value="SP">São Paulo</option>
+                          <option value="SE">Sergipe</option>
+                          <option value="TO">Tocantins</option>
+                        </select>
                     </div>
 
 
