@@ -1,9 +1,10 @@
 body{
-    /* background-image: url(img/ideias-lapis-lateral.jpg);
+    background-image: url(img/ideias-tabble.jpg);
     background-repeat: no-repeat;
-    background-position: cover; */
-    
+    background-position: center;
+    background-size: contain;
     background-color: rgb(248, 225, 20);
+    z-index: 1;
 
     
 }
