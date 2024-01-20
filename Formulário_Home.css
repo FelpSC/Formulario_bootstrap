@@ -1,11 +1,9 @@
 body{
-    background-image: url(img/ideias-tabble.jpg);
+    /* background-image: url(img/ideias-tabble.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    background-color: rgb(248, 225, 20);
-    z-index: 1;
-
+    background-size: contain; */
+    background-color: black;
     
 }
 
@@ -15,9 +13,8 @@ header{
     border: 1px solid wheat;
 
 }
-.container{
-    display: flex;
-}   
+
+
 .invisible{
     height: 75px    ;
 }
@@ -26,9 +23,9 @@ header{
     height: 20px;
   
 }
+
 .produtor{
     width: 150px;
-    left: 40px;
     text-decoration: none;
 }
 .produtor p{
@@ -38,32 +35,42 @@ header{
     
 
 }
+.nav-bar {
+    display: flex;
+}
+.nav-btn{
+    width: 100px;
+}
 
+.card{
+    display: inline;
+    
+}
+
+div{
+    border: 1px solid gray;
+}
 header img{
     margin-left: 50px;
     width: 120px;
     height: 50px;
 }
 
-.form-row img{
-    position: relative;
-    width: 1000px;
-    height: 400px;
-    margin-left: 200px;
-}
-.form-row-map iframe{
+
+.form-row-img iframe{
     border: 0.2px solid gray;
-    width: 900px;
+    width: 600px;
     height: 400px;
-    position: relative;
-    top: 200px;
-    right: 200px;
+    box-sizing: border-box;
 
+}
 
+.form-row-img img{
+  width: 600px;
+  height: 300px;
 }
 .info-form{
     color: gray;
-    border: 0.5px solid gray;
     border-radius: 6px;
     height: 1000px;
 }
@@ -71,7 +78,7 @@ header img{
 footer{
     width: 100%;
     text-align: center;
-    height: 200px;
+    height: 100px;
     
 }
 
@@ -95,19 +102,12 @@ form h3{
     border: 1px solid black;
     
 }
-.left-faixa{
-    
-    position: relative;
-    margin-left: 0;
-    width: 200px;
-    height: 100%;
 
-}
 
 .info-basics{
     background-color: whitesmoke;
     border-radius: 6px;
-    border: 0.5px solid gray;
+    height: 400px;
 
 
 }
@@ -118,4 +118,5 @@ form h3{
 
 .info-basics p{
     font-size: 14px;
+    margin-top: 0;
 }
