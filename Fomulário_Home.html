@@ -38,11 +38,10 @@
     </header>
     <div class="p-2 invisible"></div>
     <h1 class=" text-center p-1 text-dark opacity-50">Já Pensou no Próximo Evento?</h1>
-   
     <!-- Inicio Formulário  -->
 
     <div class="info-form col-12 bg-white opacity-40 container align-content-center mt-5 shadow-lg">
-        <div class="row col-5">
+        <div class="form-row row col-5">
             <div class="ms-2 col-12 p-3 pt-4">
                 <h2 class="subtitulo text-primary">Insira as Informações do Seu <span class="text-black">Evento:</span></h2>
                 <form>
@@ -65,7 +64,7 @@
                     
                     <div class="mb-2">
                         <h3  class="ms-2">CEP</h3>
-                        <label for="" class="form-label"></label>
+                        <label for="" class="form-label" aria-required="true" aria-invalid="true"></label>
                         <input type="text" class="form-control">
                     </div>
 
@@ -136,6 +135,44 @@
                 </form>
                 
             </div>
+        </div>
+
+        <div class="form-row row col-3">
+            <img src="img/20943466.jpg" alt="" class="mt-5">
+
+        </div>
+        
+        <div class="form-row-map row col-6 ms-5 align-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.778399466974!2d-48.611947523665414!3d-27.60039912228939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273704b00a4675%3A0x1ea131e1a97e393f!2sPensanoevento!5e0!3m2!1spt-BR!2sbr!4v1705712392266!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </div>
+
+    <div class="info-basics container col-12 mt-3  bg-light shadow-lg">
+        <div class="row p-3">
+            <h2 class="text-primary">Insira as Informações Básicas do Evento</h2>
+            <p class="ms-2">* Você pode Adicionar imagens, data/hora e Descritivo</p>
+           
+            <form>
+                <div class="mb-2">
+                    <h3 class="ms-2">Nome do Evento</h3>
+                    <label for="nome-evento"></label>
+                    <input type="text" class="form-control">
+
+                </div>
+
+                <div class="mb-2">
+                    <label for=""></label>
+                    
+                </div>
+
+
+
+            </form>
+                
+                
+           
         </div>
 
     </div>

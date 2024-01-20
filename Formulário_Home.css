@@ -45,11 +45,27 @@ header img{
     height: 50px;
 }
 
+.form-row img{
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin-left: 200px;
+}
+.form-row-map iframe{
+    border: 0.2px solid gray;
+    width: 900px;
+    height: 400px;
+    position: relative;
+    top: 200px;
+    right: 200px;
+
+
+}
 .info-form{
     color: gray;
     border: 0.5px solid gray;
     border-radius: 6px;
-    height: 1200px  ;
+    height: 1000px;
 }
 
 footer{
@@ -86,4 +102,20 @@ form h3{
     width: 200px;
     height: 100%;
 
+}
+
+.info-basics{
+    background-color: whitesmoke;
+    border-radius: 6px;
+    border: 0.5px solid gray;
+
+
+}
+
+.info-basics h2{
+    font-size: 18px ;
+}
+
+.info-basics p{
+    font-size: 14px;
 }
