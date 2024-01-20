@@ -14,7 +14,6 @@ header{
 
 }
 
-
 .invisible{
     height: 75px    ;
 }
@@ -23,7 +22,10 @@ header{
     height: 20px;
   
 }
-
+.info-form{
+    border-radius: 6px;
+    background-color: whitesmoke;
+}
 .produtor{
     width: 150px;
     text-decoration: none;
@@ -42,14 +44,15 @@ header{
     width: 100px;
 }
 
-.card{
-    display: inline;
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
-div{
+/* div{
     border: 1px solid gray;
-}
+} */
 header img{
     margin-left: 50px;
     width: 120px;
@@ -65,15 +68,15 @@ header img{
 
 }
 
+
+
 .form-row-img img{
+  display: flex;  
   width: 600px;
   height: 300px;
+  align-items: center;
 }
-.info-form{
-    color: gray;
-    border-radius: 6px;
-    height: 1000px;
-}
+
 
 footer{
     width: 100%;
