@@ -110,7 +110,7 @@ form h3{
 .info-basics{
     background-color: whitesmoke;
     border-radius: 6px;
-    height: 400px;
+    height: 900px;
 
 
 }
@@ -122,4 +122,23 @@ form h3{
 .info-basics p{
     font-size: 14px;
     margin-top: 0;
+}
+
+#inputgroupfile{
+    border: 1px solid gray;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+.card-img-texto p{
+    font-size: 14px;
+    position: relative;
+    top:50px;
+
+}
+
+.descritivo textarea{
+    height: 200px;
 }
