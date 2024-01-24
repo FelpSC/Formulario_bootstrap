@@ -110,7 +110,8 @@ form h3{
 .info-basics{
     background-color: whitesmoke;
     border-radius: 6px;
-    height: 900px;
+    height: 1200px;
+    box-sizing: border-box;
 
 
 }

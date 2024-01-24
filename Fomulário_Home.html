@@ -161,20 +161,20 @@
                 
                     <form class="col">
                         <div class="mb-5">
-                            <p class="mb-1 pb-1 ms-2">Selecione Uma Imagem</p>
-                            <label for="nome-evento"></label>
-                            <input type="text" class="form-control" maxlength="100">
+                            <p class="mb-1 pb-1 ms-2"></p>
+                            <label for="nome-evento">Insira o Titulo do Evento</label>
+                            <input type="text" class="form-control" maxlength="50">
 
                         </div>
 
-                        <div class="card mb-2 flex-row p-2 ">
-                            <div class="card-body">
+                        <div class="card mb-2 row">
+                            <div class="card-body ms-2">
                                 
-                                <label for="inputgroupfile" class="picture mt-2"></label>
-                                <input type="file" id="inputgroupfile" class="form-text">
+                                <label for="inputgroupfile" class="picture mt-2">Selecione Uma Imagem</label>
+                                <input type="file" id="inputgroupfile">
                             </div>
 
-                            <div class="card-img-texto card-body">
+                            <div class="card-img-texto row pt-5">
                                 <p class="col-4 ms-2">Selecione uma Imagem de divulgação, a mesma pode ter o <strong>formato de 
                                     960px horizontais e 480px na vertical</strong> no tamanho de <strong>até 2MB</strong>
                                 </p>
@@ -183,10 +183,27 @@
                             
                         </div>
 
-                        <div class="descritivo  col-12 p-2">
+                        <div class="descritivo p-2">
                             <div class="row col">
                                 <label for="descritivo" class="ms-2 p-2">Insira uma Descrição:</label>
                                 <textarea type="text" class="form-control"></textarea>
+
+                                <div class="row col-8 container p-2">
+                                    <div class="col-5 p-2">
+                                        <h2>Data do Evento</h2>
+                                        <label for="data">
+                                            <input type="date" id="data" class="p-1">
+                                        </label>
+                                    </div>
+
+                                    <div class="col-4  p-2 ms-6">
+                                        <h2>Hora De inicio</h2>
+                                        <label for="datetime">
+                                            <input type="time" id="datetime" class="p-1">
+                                        </label>
+                                    </div>
+                                </div>
+
 
                             </div>
 
@@ -199,15 +216,20 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="bg-dark">
+        <footer class="bg-dar">
+            <h2 class="text-white p-3 mt-3">FelpSC</h2>
+
+        </footer>
+    </div>
 
 
 
-    <footer class="bg-dark container-fluid">
-        <h2 class="text-white p-3 mt-3">FelpSC</h2>
 
-    </footer>
-
-
+        
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
