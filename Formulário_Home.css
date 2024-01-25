@@ -50,9 +50,6 @@ header{
     
 }
 
-/* div{
-    border: 1px solid gray;
-} */
 header img{
     margin-left: 50px;
     width: 120px;
@@ -110,7 +107,8 @@ form h3{
 .info-basics{
     background-color: whitesmoke;
     border-radius: 6px;
-    height: 1200px;
+    max-height: 2000px;
+    min-height: 1200px;
     box-sizing: border-box;
 
 
@@ -125,6 +123,25 @@ form h3{
     margin-top: 0;
 }
 
+.info-img span{
+    font-weight: bold;
+
+}
+.info-img div{
+    border: 1px solid black;
+}
+.info-img{
+    align-self: center;
+    align-items: center;
+    min-height: 500px;
+    max-height: 600px;
+    border: 1px solid black;
+    justify-content: space-around;
+    gap: 2px;
+}
+.info-img p{
+    font-size: 14px;
+}
 #inputgroupfile{
     border: 1px solid gray;
     width: 300px;
@@ -133,9 +150,8 @@ form h3{
 }
 
 
-
 .descritivo textarea{
-    height: 200px;
+    height: 300px;
 }
 
 .hora_data input{
@@ -145,6 +161,15 @@ form h3{
     text-align: center;
     border-radius: 4px;
     
+}
+.hora_data{
+    /* border: 1px solid black; */
+    padding-top: 20px;
+}
+.display-inicio{
+    /* border: 1px solid red; */
+}
 
-
+.display-fim{
+    /* border: 1px solid red; */
 }
