@@ -137,3 +137,14 @@ form h3{
 .descritivo textarea{
     height: 200px;
 }
+
+.hora_data input{
+    width: 160px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    border-radius: 4px;
+    
+
+
+}

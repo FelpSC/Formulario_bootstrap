@@ -160,63 +160,64 @@
                     <p class="p-1">* Você pode Adicionar imagens, data/hora e Descritivo</p>
                 
                     <form class="col">
-                        <div class="mb-5">
-                            <p class="mb-1 pb-1 ms-2"></p>
+                        <div>
                             <label for="nome-evento">Insira o Titulo do Evento</label>
                             <input type="text" class="form-control" maxlength="50">
 
                         </div>
 
-                        <div class="card mb-2 row">
-                            <div class="card-body ms-2">
-                                
-                                <label for="inputgroupfile" class="picture mt-2">Selecione Uma Imagem</label>
-                                <input type="file" id="inputgroupfile">
-                            </div>
+                        <div class="container">
+                            <div class="row align-items-center flex-wrap flex-nowrap bg-light">
+                                <div class="col-4">
+                                    <p class="p-2">Selecione Uma Imagem</p>
+                                    <label for="inputgroupfile" class="picture mt-2"></label>
+                                    <input type="file" id="inputgroupfile">
+                                </div>
 
-                            <div class="card-img-texto row pt-5">
-                                <p class="col-4 ms-2">Selecione uma Imagem de divulgação, a mesma pode ter o <strong>formato de 
-                                    960px horizontais e 480px na vertical</strong> no tamanho de <strong>até 2MB</strong>
-                                </p>
+                                <div class="col-4">
+                                    <p class="col-6 lh-5">Selecione uma Imagem de divulgação, a mesma pode ter o <strong>formato de 
+                                        960px horizontais e 480px na vertical</strong> no tamanho de <strong>até 2MB</strong>
+                                    </p>
 
+                                </div>
                             </div>
                             
                         </div>
 
                         <div class="descritivo p-2">
-                            <div class="row col">
+                            <div class="col">
                                 <label for="descritivo" class="ms-2 p-2">Insira uma Descrição:</label>
                                 <textarea type="text" class="form-control"></textarea>
 
-                                <div class="row container col-12">
-                                    <div class="row">
-                                        <div class="">
-                                            <h2>Data do Evento</h2>
+                                <div class="row hora_data col container">
+                                    <div class="row col-5 p-2 mt-2">
+                                        <div class="col">
+                                            <p>Data do Evento</p>
                                             <label for="datainicio">
-                                                <input type="date" id="datainicio" class="p-1">
+                                                <input type="date" id="datainicio" class="border-primary">
                                             </label>
                                         </div>
 
-                                        <div class="">
-                                            <h2>Hora De inicio</h2>
+                                        <div class="col">
+                                            <p>Hora De inicio</p>
                                             <label for="horainicio">
-                                                <input type="time" id="horainicio" class="p-1">
+                                                <input type="time" id="horainicio" class="border-primary">
                                             </label>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="">
-                                            <h2>Data de Encerramento</h2>
+                                    <div class="row col-5 p-2 ms-8 mt-2">
+                                        <div class="col">
+                                            <p>Data de Encerramento</p>
                                             <label for="dataencerramneto">
-                                                <input type="date" id="dataencerramento" class="p-1">
+                                                <input type="date" id="dataencerramento" class="border-primary">
                                             </label>
                                         </div>
 
-                                        <div class="">
-                                            <h2>Hora De Encerramento</h2>
+                                        <div class="col">
+                                            <p>Hora De Encerramento</p>
                                             <label for="horaencerramento">
-                                                <input type="time" id="horaencerramento" class="p-1">
+                                                <input type="time" accept="number backspace" id="horaencerramento" class="border-primary">
                                             </label>
                                         </div>
 
