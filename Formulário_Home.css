@@ -66,7 +66,6 @@ header img{
 }
 
 
-
 .form-row-img img{
   display: flex;  
   width: 600px;
@@ -130,12 +129,13 @@ form h3{
 .info-img div{
     border: 1px solid black;
 }
+
 .info-img{
     align-self: center;
     align-items: center;
     min-height: 500px;
     max-height: 600px;
-    border: 1px solid black;
+    border: 1px dashed black;
     justify-content: space-around;
     gap: 2px;
 }
