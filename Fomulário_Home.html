@@ -154,7 +154,7 @@
 
             <!-- INFORMAÇÕES BÁSICAS -->
 
-            <div class="info-basics container-fluid col-12 mt-3 bg-light shadow-lg">
+            <div class="info-basics container-fluid col-12 mt-5 shadow-lg">
                 <div class="row p-3">
                     <h2 class="text-primary">Insira as Informações Básicas do Evento</h2>
                     <p class="p-1">* Você pode Adicionar imagens, data/hora e Descritivo</p>
@@ -167,15 +167,17 @@
                         </div>
 
                         <div class="container-fluid p-3">
-                            <div class="row info-img flex-wrap bg-light">
-                                <div class="col text-md-start text-sm-start">
-                                    <p class="p-2">Selecione Uma Imagem</p>
-                                    <label for="inputgroupfile" class="picture"></label>
-                                    <input type="file" id="inputgroupfile">
-                                </div>
+                            <div class="row info-img flex-wrap">
+                                    <div class=" card col-4">
+                                        <small class="card-title">Selecione Uma Imagem </small>   
+                                        <label for="inputgroupfile" class="picture">
+                                            <input type="file" id="inputgroupfile">
+                                        </label>
+                                    </div>
+                                    
 
-                                <div class="col-3 text-sm-end text-md-end col-sm-8 col-md-8">
-                                    <p class="col lh-5">A dimensão <span>recomendada é de 960 x 360</span>
+                                <div class="col-3 text-sm-start text-md-start col-sm-8 col-md-5">
+                                    <p class="lh-5">A dimensão <span>recomendada é de 960 x 360</span>
                                         (mesma proporção do formato utilizado nas páginas de evento no Facebook).
                                         <span>Formato JPEG, GIF ou PNG de no máximo 2MB</span>.
                                         Imagens com dimensões diferentes serão redimensionadas.
@@ -241,8 +243,8 @@
         </div>
     </div>
 
-    <div class="bg-dark">
-        <footer class="bg-dar">
+    <div class="bg-dark mt-5">
+        <footer class="bg-dark">
             <h2 class="text-white p-3 mt-3">FelpSC</h2>
 
         </footer>
