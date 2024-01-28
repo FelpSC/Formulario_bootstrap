@@ -5,7 +5,22 @@ body{
     background-size: contain; */
     background-color: black;
     
+    
 }
+
+div{
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+/* DIV PARA NÃO DEIXAR O FIXADO COBRIR OUTROS 
+EMENTTOS NO TOPO */
+
+
+.invisible{
+    height: 75px;
+}
+
+/* TOPO DA PÁGINA  */
 
 header{
     height: 75px;
@@ -24,7 +39,7 @@ header{
 }
 .info-form{
     border-radius: 6px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 .produtor{
     width: 150px;
@@ -50,12 +65,23 @@ header{
     
 }
 
+
 header img{
     margin-left: 50px;
     width: 120px;
     height: 50px;
 }
 
+/* SUBTITULO */
+
+.subtitulo{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+/* FORMULÁRIO - LOCAL */
 
 .form-row-img iframe{
     border: 0.2px solid gray;
@@ -65,7 +91,6 @@ header img{
 
 }
 
-
 .form-row-img img{
   display: flex;  
   width: 600px;
@@ -74,18 +99,6 @@ header img{
 }
 
 
-footer{
-    width: 100%;
-    text-align: center;
-    height: 100px;
-    
-}
-
-.subtitulo{
-    font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 form h3{
     position: relative;
     top:25px;
@@ -93,23 +106,17 @@ form h3{
     color: black;
     font-weight: bold;
     opacity: 80%;
-   
     
 }
 
-.div-subtit{
-    border: 1px solid black;
-    
-}
-
+/* INFORMAÇÕES BASICAS */
 
 .info-basics{
-    
+    /* background-color: whitesmoke; */
     border-radius: 6px;
-    max-height: 2000px;
     min-height: 1200px;
+    max-height: 3000px;
     box-sizing: border-box;
-
 
 }
 
@@ -122,36 +129,43 @@ form h3{
     margin-top: 0;
 }
 
-.info-img span{
+.picture{
+    border: 2.5px dashed;
+}
+
+.picture span{
     font-weight: bold;
 
 }
-.info-img div{
-    border: 1px solid black;
-}
 
-.info-img{
-    align-self: center;
-    align-items: center;
-    min-height: 500px;
-    max-height: 600px;
-    border: 1px dashed black;
-    justify-content: space-around;
-    gap: 2px;
+
+.img-capa{
+    max-width: 940px;
+    max-height: 360px;
+    min-width: 400px;
+    min-height: 200px;
 }
-.info-img p{
-    font-size: 14px;
-}
-#inputgroupfile{
-    border: 1px solid gray;
+.img-logo{
     width: 300px;
     height: 200px;
+}
+
+.img-capa small{
+    font-size: 14px;
+
+}
+.img-logo small{
+    font-size: 12px;
+
+}
+
+#inputgroupfile{
+    display: none;
     cursor: pointer;
 }
 
-
 .descritivo textarea{
-    height: 300px;
+    height: 200px;
 }
 
 .hora_data input{
@@ -160,16 +174,53 @@ form h3{
     color: black;
     text-align: center;
     border-radius: 4px;
-    
-}
-.hora_data{
-    /* border: 1px solid black; */
-    padding-top: 20px;
-}
-.display-inicio{
-    /* border: 1px solid red; */
+
 }
 
-.display-fim{
-    /* border: 1px solid red; */
+.local-opt select{
+    font-size: 12px;
 }
+.estados-opt select{
+    font-size: 12px;
+
+}
+.hora_data p{
+    font-size: 12px;
+
+}
+
+.evento-categoria{
+    min-height: 100px;
+    max-height: 300px;
+}
+.evento-categoria option{
+    font-size: 12px;
+}
+
+.evento-categoria select{
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+/* INGRESSOS / TICKETS */
+
+.cont-ingressos{
+    min-height: 1200px;
+    max-height: 3000px;
+}
+
+
+
+footer{
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
