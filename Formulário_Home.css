@@ -205,7 +205,7 @@ form h3{
 /* INGRESSOS / TICKETS */
 
 .cont-ingressos{
-    min-height: 1200px;
+    min-height: 1000px;
     max-height: 3000px;
 }
 
@@ -218,10 +218,34 @@ form h3{
     color: black;
 }
 
-.criar-ingresso{
-
+.criar-tkt{
+    background-color:whitesmoke;
+    
 }
 
+.bi-star-fill{
+    font-size: 36px;
+    transition: 300ms ease-in-out;
+}
+.bi-ticket-detailed-fill{
+    font-size: 36px;
+}
+
+.criar-tkt:hover{
+    background-color: cornflowerblue;
+    color:#fff;
+    transition: 300ms ease-in-out;
+}
+
+.bi-star-fill:hover{
+    color: #fff;
+}
+
+/* TICKETS - TABELA */
+th, 
+tr{
+    padding: 10px;
+}
 
 footer{
     margin-top: 50px;
