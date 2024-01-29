@@ -266,6 +266,11 @@ form h3{
 
 /* TICKETS - TABELA */
 
+.tkt-table{
+    min-height: 600px;
+    max-height: 3000px;
+}
+
 
 /* TERMOS & RESPONSABILIDADE */
 
