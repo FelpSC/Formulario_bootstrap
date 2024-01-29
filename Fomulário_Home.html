@@ -10,8 +10,8 @@
 
 <body>
     <!-- Cabeçalho -->
-    <nav class="navbar navbar-expand-sm bg-dark  d-flex p-2 sticky-top">
-        <div class="nav-bar container text-sm-start text-lg-start">
+    <nav class="navbar bg-dark  d-flex p-2 sticky-top">
+        <div class="nav-bar container">
             <a class="nav-bar img" href="https://www.pensanoevento.com.br/" target="_blank"><img class="p-2" src="img/pensa-logo.webp" alt=""></a>
             <a class="nav-bar produtor" href="https://www.pensanoevento.com.br/sistema/" target="_blank"><p class="p-2 ms-2">MEUS EVENTOS</p></a>
             <!-- Menu -->
@@ -20,17 +20,18 @@
                     Menu
                 </button>
                 <div class="dropdown-menu">
-                    <h2 class="dropdown-header">Selecione</h2>
-                    <a href="#" class="dropdown-item">Sols</a>
-                    <a href="#" class="dropdown-item">Lua</a>
-                    <a href="#" class="dropdown-item">Estrela</a>
+                    <h2 class="dropdown-header">Principais</h2>
+                    <a href="https://www.pensanoevento.com.br/sistema/" class="dropdown-item"><i class="bi-rocket-takeoff"> Meus Eventos</i></a>
+                    <a href="https://www.pensanoevento.com.br/perfil/cadastro.php" class="dropdown-item"><i class="bi-person-fill"></i> Meu Perfil</a>
+                    <a href="https://www.pensanoevento.com.br/perfil/compras/" class="dropdown-item"><i class="bi-ticket-fill"></i> Meus Ingressos</a>
+                    <a href="#" class="dropdown-item"><i class="bi-wallet2"></i> Carteira</a>
                     <hr class="dropdown-divider">
-                    <h2 class="dropdown-header">Selecione</h2>
-                    <a href="#" class="dropdown-item">Terra</a>
-                    <a href="#" class="dropdown-item">Fogo</a>
-                    <a href="#" class="dropdown-item">Àgua</a>
+                    <h2 class="dropdown-header"><i class="bi-sunglasses"></i> Rolê Pela Plataforma</h2>
+                    <a href="https://www.pensanoevento.com.br/agenda/" class="dropdown-item"><i class="bi-calendar"> Agenda Da Semana</i></a>
+                    <a href="https://www.pensanoevento.com.br/dicas/" class="dropdown-item"><i class="bi-newspaper"> Dicas / Noticias</i></a>
+                    <a href="https://www.pensanoevento.com.br/fotos/" class="dropdown-item"><i class="bi-camera-fill"> Albuns / Fotos</i></a>
                     <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item">Sair</a>
+                    <a href="#" class="dropdown-item"><i class="bi-door-open-fill">  Sair</i></a>
                 </div>
             </div>
         </div>      
@@ -45,7 +46,7 @@
                 <div class="row container-fluid align-content-center mx-1">
                     <div class="container-card flex-row flex-wrap card border-0" >
                         <div class="card-body">
-                            <h2 class="subtitulo text-primary">Insira as Informações do Seu <span class="text-black">Evento:</span></h2>
+                            <h2 class="subtitulo text-primary"><li>Informações o Local do<span class="text-black"> Evento:</span></li></h2>
                             <hr>
                             <form>
                                 <div class="local-opt mb-2">
@@ -155,7 +156,7 @@
 
         <div class="info-basics container-fluid col-12 mt-5 shadow-lg">
             <div class="row p-3">
-                <h2 class="subtitulo text-primary">Insira as Informações Básicas do Evento</h2>
+                <h2 class="subtitulo text-primary"><li>Informações do Evento</li></h2>
                 <hr class="col-4">
                 <p class="p-1">* Você pode Adicionar imagens, data/hora e Descritivo</p>
             
@@ -169,28 +170,32 @@
                      <!-- INFO - IMAGENS -->
 
                     <div class="container-fluid p-3 shadow-sm">
-                        <div class="info-img row my-4 col-md-10 d-flex flex-wrap justify-content-around">
+                        <div class="info-img container row my-4 col-md-10 d-flex flex-wrap justify-content-around">
 
                             <div class="col">
                                 <small class="p-2">Logo</small>
-                                <label for="inputgroupfile" class="img-logo picture p-3 d-flex justify-content-center align-items-end">
-                                    <small class="lh-5 picture_txt text-center">A dimensão <span>recomendada é de 432 x 280</span>
-                                        <span>Formato JPEG ou PNG</span>.
-                                        Imagens com dimensões diferentes serão redimensionadas.
-                                    </small>
-
-                                    
+                                <label for="inputgroupfile" class="img-logo picture">
+                                    <div class="text-center d-flex flex-column justify-content-end">
+                                        <i class="bi-image fs-1"></i>
+                                        <small class="lh-5 picture_txt">A dimensão <span>recomendada é de 432 x 280</span>
+                                            <span>Formato JPEG ou PNG</span>.
+                                            Imagens com dimensões diferentes serão redimensionadas.
+                                        </small>
+                                    </div>
                                 </label>
                                 <input type="file" name="picture_input" accept="image/*" id="inputgroupfile">
                             </div>
 
                             <div class="col">
                                 <small class="p-2">Capa</small>
-                                <label for="inputgroupfile" class="img-capa picture p-3 d-flex justify-content-center align-items-end">
-                                    <small class="lh-5 text-center">A dimensão <span>recomendada é de 940 x 360</span>
-                                        <span>Formato JPEG ou PNG</span>.
-                                        Imagens com dimensões diferentes serão redimensionadas.
-                                    </small>
+                                <label for="inputgroupfile" class="img-capa picture">
+                                    <div class="text-center d-flex flex-column">
+                                        <i class="bi-image fs-1"></i>
+                                        <small class="lh-5">A dimensão <span>recomendada é de 940 x 360</span>
+                                            <span>Formato JPEG ou PNG</span>.
+                                            Imagens com dimensões diferentes serão redimensionadas.
+                                        </small>
+                                    </div>
 
                                     
                                 </label>
@@ -228,7 +233,7 @@
 
                                 <div class="row col-6 p-2">
                                     <label for="categoria-genero">
-                                        <small class="p-2">Genero:</small>
+                                        <small class="p-2">Gênero:</small>
                                         <select name="tipo-evento" id="categoria-genero" class="form-select m-1">
                                             <option value="" class="text-muted">Selecione</option>
                                             <option value="Eventos">Eventos</option>
@@ -244,35 +249,47 @@
 
                             <!-- INFO - DATA/HORA -->
 
-                            <div class="row hora_data col container justify-content-around p-4 my-4">
-                                <div class="display-inicio row col-4">
+                            <div class="hora_data col container justify-content-center p-4 my-4">
+                                <div class="display-inicio row">
                                     <div class="col p-2">
                                         <p>Data de Inicio</p>
                                         <label for="datainicio">
-                                            <input type="date" id="datainicio" class="border-primary">
+                                            <div class="input-group">
+                                                <input type="tel" id="datainicio" placeholder="Data" class="form-control">
+                                                <i class="bi-calendar input-group-text"></i>
+                                            </div>
                                         </label>
                                     </div>
 
                                     <div class="col p-2">
                                         <p>Hora De inicio</p>
                                         <label for="horainicio">
-                                            <input type="time" id="horainicio" class="border-primary">
+                                            <div class="input-group">
+                                                <input type="tel" id="horainicio" placeholder="Hora" maxlength="5" class="form-control">
+                                                <i class="bi-clock input-group-text"></i>
+                                            </div>
                                         </label>
                                     </div>
                                 </div>
 
-                                <div class="display-fim row justify-content-center col-4">
+                                <div class="display-fim row">
                                     <div class="col p-2">
                                         <p>Data de Encerramento</p>
                                         <label for="dataencerramneto">
-                                            <input type="date" id="dataencerramento" class="border-primary">
+                                            <div class="input-group">
+                                                <input type="tel" id="dataencerramento" placeholder="Data" class="form-control">
+                                                <i class="bi-calendar input-group-text"></i>
+                                            </div>
                                         </label>
                                     </div>
 
                                     <div class="col p-2">
                                         <p>Hora de Encerramento</p>
                                         <label for="horaencerramento">
-                                            <input type="time" accept="number backspace" id="horaencerramento" class="border-primary">
+                                            <div class="input-group">
+                                                <input type="datetime" maxlength="5" id="horaencerramento" accept="number" placeholder="Hora" class="form-control">
+                                                <i class="bi-clock input-group-text"></i>
+                                            </div>
                                         </label>
                                     </div>
 
@@ -297,7 +314,7 @@
 
             <div class="row p-2 mx-2">
                 <div class="subtitulo p-2">
-                    <h3 class="text-primary text-dark opacity-75">Ingressos | Tickets</h3>
+                    <h3 class="text-primary text-dark opacity-75"><li>Ingressos | Tickets</li></h3>
                     <hr class="col-3">
                 </div>
                
@@ -323,59 +340,122 @@
                 </div>
 
             </div>
-                
+                <hr class="my-4">
                 <!-- INGRESSOS - TABELA -->
 
-            <div class="tkt-table container shadow-">
-                <table class="table table-bordered table-striped align-middle text-center caption-top table-hover table-responsive">
-                    <caption class="text-center bg-dark text-light"> Controle de Ingressos </caption>
-                    <thead class="table-group-divider">
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
+            <div class="tkt-table container shadow-sm">
+                <div class="row col-sm table-responsive">
+                    <table class="table col table-bordered table-striped align-middle caption-top table-hover table-sm text-center table-responsive">
+                        <caption class="text-center bg-dark text-light">
+                            Controle de Ingressos
+                        </caption>
+                        <thead class="table-group-divider">
+                            <tr>
+                                <th><i class="bi-eye-fill"> Ver Pedido</i></th>
+                                <th><i class="bi-calendar"> Data</i></th>
+                                <th><i class="bi-currency-dollar"> Valor</i></th>
+                                <th><i class="bi-ticket-detailed"> N° Pedido</i></th>
+                                <th><i class="bi-person-vcard-fill"> Nome</i></th>
+                                <th><i class="bi-collection-fill"> Qnt. Ingresso</i></th>
+                                <th><i class="bi-check"> Status</i></th>
+                                <th><i class="bi-credit-card-fill"> Pagamento</i></th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            <tr>
+                                <td id=""><button class="btn btn-primary"><i class="bi-search text-white"></i></button></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                            </tr>
+                            <tr>
+                                <td id=""><button class="btn btn-primary"><i class="bi-search text-white"></i></button></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                            </tr>
+                            <tr>
+                                <td id=""><button class="btn btn-primary"><i class="bi-search text-white"></i></button></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                            </tr>
+                            <tr>
+                                <td id=""><button class="btn btn-primary"><i class="bi-search text-white"></i></button></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                                <td id=""></td>
+                            </tr>
+                        </tbody>
 
-                </table>
+                    </table>
+                    
+                </div>
 
+            </div>
+
+        </div>
+
+        <div class="container  shadow-lg my-3">
+            <div class="row p-3 ">
+                <div class="col p-5">
+                    <h3 class="text-warning" style="font-size: 22px;"><li>Termos de Responsabilidade</li></h3>
+                    <div class="row">
+                        <div class="termos form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check-termos">
+                            <label class="form-check-label ms-3" for="">
+                                <p style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis tempore maxime iusto 
+                                    inventore aliquam incidunt doloremque consequatur itaque veritatis!
+                                </p>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cont-fim container col shadow-lg p-3 my-5">
+            <div class="my-5 p-2">
+                <h3 class="text-center text-dark opacity-50">Tudo Pronto Para o Start?</h3>
+                <hr>
+                <div class="row align-content-center d-flex col my-4 text-center">
+                    <div class="col">
+                        <button class="btn btn-primary p-2 col-2">
+                            <i class="bi-rocket-takeoff ">  Publicar </i>
+                            
+                        </button>
+                        <button class="btn btn-primary p-2">
+                            <i class="bi-eye"> Quero Ver Primeiro</i>
+
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi-save"> Salvar Evento</i>
+
+                        </button>
+
+                    </div>
+
+                    
+                </div>
             </div>
 
         </div>

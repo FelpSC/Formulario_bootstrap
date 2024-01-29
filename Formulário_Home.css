@@ -13,12 +13,12 @@ div{
 }
 
 /* DIV PARA NÃO DEIXAR O FIXADO COBRIR OUTROS 
-EMENTTOS NO TOPO */
+EMENTTOS NO TOPO 
 
 
 .invisible{
     height: 75px;
-}
+} */
 
 /* TOPO DA PÁGINA  */
 
@@ -31,13 +31,6 @@ nav{
 }
 
 
-
-
-.dropdown{
-    margin-right: 50px;
-    height: 20px;
-  
-}
 .info-form{
     border-radius: 6px;
     /* background-color: whitesmoke; */
@@ -54,6 +47,10 @@ nav{
 
 }
 
+.container, .container-fluid{
+    border-radius: 6px;
+}
+
 .nav-btn{
     width: 100px;
 }
@@ -64,6 +61,10 @@ nav{
     
 }
 
+.dropdown-menu a:hover{
+    color: white;
+    background-color: cornflowerblue;
+}
 
 nav img{
     margin-left: 50px;
@@ -137,25 +138,44 @@ form h3{
 
 }
 
+.img-logo:hover{
+    background-color: #eee;
+    border: 1px dashed cornflowerblue;
+    transition: 300ms ease-in-out;
+    text-shadow: 0.5px 0.5px 0.2px black;
+}
+
+
+
+.img-capa:hover{
+    background-color: #eee;
+    text-shadow: 0.5px 0.5px 0.2px black;
+    border: 1px dashed cornflowerblue;
+    transition: 300ms ease-in-out;
+   
+}
 
 .img-capa{
     max-width: 940px;
     max-height: 360px;
     min-width: 400px;
     min-height: 200px;
+    cursor: pointer;
 }
 .img-logo{
-    width: 300px;
-    height: 200px;
+    max-width: 432px;
+    max-height: 280px;
+    min-width: 300px;
+    min-height: 200px;
+    cursor: pointer;
 }
-
-.img-capa small{
-    font-size: 14px;
-
+.picture i{
+    margin-top: 50px;
 }
-.img-logo small{
+.picture small{
     font-size: 12px;
-
+    padding: 10px;
+    margin-top: 50px;
 }
 
 #inputgroupfile{
@@ -209,6 +229,9 @@ form h3{
     max-height: 3000px;
 }
 
+.ingressos{
+    max-height: 3000px;
+}
 .ingressos a{
     border: 1px solid black;
     height: 160px;
@@ -242,10 +265,28 @@ form h3{
 }
 
 /* TICKETS - TABELA */
-th, 
-tr{
-    padding: 10px;
+
+
+/* TERMOS & RESPONSABILIDADE */
+
+.termos input:checked{
+    background-color:cornflowerblue;
+    width: 18px;
+    height: 18px;
+    color: white;
+    border: 1px solid cornflowerblue;
+    box-shadow: none;
+    transition: 100ms ease-out;
 }
+
+
+.termos input{
+    cursor: pointer;
+}
+
+/* PUBLICAR - VISUALIZAR - SALVAR */
+
+
 
 footer{
     margin-top: 50px;
