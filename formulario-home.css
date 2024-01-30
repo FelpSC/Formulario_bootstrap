@@ -156,9 +156,9 @@ form h3{
 }
 
 .img-capa{
-    max-width: 940px;
+    max-width: 600px;
     max-height: 360px;
-    min-width: 400px;
+    min-width: 300px;
     min-height: 200px;
     cursor: pointer;
 }
