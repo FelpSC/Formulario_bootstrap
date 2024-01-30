@@ -40,7 +40,7 @@
     <!-- Inicio Formulário  -->
 
     <!-- LOCAL -->
-    <div class="container align-content-center">
+    <div class="container">
         <div class="info-form cards-info border-1 bg-white mt-5 shadow-lg">  
             
                 <div class="row container-fluid align-content-center mx-1">
@@ -169,13 +169,13 @@
 
                      <!-- INFO - IMAGENS -->
 
-                    <div class="container p-3 shadow-sm">
-                        <div class="info-img container row my-4 d-flex flex-wrap justify-content-around">
+                    <div class="container py-5 shadow-sm">
+                        <div class="info-img row gap-2 my-4 d-flex justify-content-around flex-sm-column flex-lg-row">
 
-                            <div class="col container">
+                            <div class="col-md-4">
                                 <small class="p-2">Logo</small>
-                                <label for="inputgroupfile" class="img-logo picture">
-                                    <div class="text-center d-flex flex-column justify-content-end">
+                                <label for="inputimg" class="img-logo picture">
+                                    <div class="text-center d-flex flex-column ">
                                         <i class="bi-image fs-1"></i>
                                         <small class="lh-5 picture_txt">A dimensão <span>recomendada é de 432 x 280</span>
                                             <span>Formato JPEG ou PNG</span>.
@@ -183,12 +183,12 @@
                                         </small>
                                     </div>
                                 </label>
-                                <input type="file" name="picture_input" accept="image/*" id="inputgroupfile">
+                                <input type="file" name="picture-input" accept="image/*" id="inputimg">
                             </div>
 
-                            <div class="col container-fluid">
+                            <div class="col-md-5 col-lg-6 ">
                                 <small class="p-2">Capa</small>
-                                <label for="inputgroupfile" class="img-capa picture">
+                                <label for="inputimg" class="img-capa picture">
                                     <div class="text-center  d-flex flex-column">
                                         <i class="bi-image fs-1"></i>
                                         <small class="lh-5">A dimensão <span>recomendada é de 940 x 360</span>
@@ -199,7 +199,7 @@
 
                                     
                                 </label>
-                                <input type="file" accept="image/*" id="inputgroupfile">
+                                <input type="file" name="picture-input" accept="image/*" id="inputimg">
 
                             </div>
 
@@ -312,31 +312,28 @@
 
         <div class="cont-ingressos container-fluid col-12 shadow-lg my-5 p-2">
 
-            <div class="row p-2 mx-2">
+            <div class="h-ingresso row p-2 mx-2">
                 <div class="subtitulo p-2">
                     <h3 class="text-primary text-dark opacity-75"><li>Ingressos | Tickets</li></h3>
                     <hr class="col-3">
                 </div>
                
 
-                <div class="ingressos col container my-4 shadow-sm">
-                    <div class="criar-ingresso row d-flex" style="height: 300px;">
-                        <h3 class="text-center text-dark opacity-50">Ingresso | Cupom</h3>
-                        <hr>
-                        
-                        <div class="row justify-content-evenly g-2">
-                            <a href="" class="criar-tkt p-4 row">
-                                <i class="bi-ticket-detailed-fill text-center"> </i>
-                                <small class="text-center">CRIAR INGRESSO</small>
-                            </a>
-                        
-                            <a href="" class="criar-tkt p-4 row">
-                                <i class="bi-star-fill text-center"> </i>
-                                <small class="text-center">CRIAR CUPOM</small>
-                                
-                            </a>
-                        </div>
+                <div class="ingressos container my-4 pe-3 shadow-sm">
+                    <h3 class="text-center text-dark opacity-50">Ingresso | Cupom</h3>
+                    <div class="criar-ingresso container row d-flex flex-wrap py-4">
+                        <a href="" class="criar-tkt text-center p-4 row">
+                            <i class="bi-ticket-detailed-fill"> </i>
+                            <small>CRIAR INGRESSO</small>
+                        </a>
+
+                        <a href="" class="criar-tkt p-4  text-center row">
+                            <i class="bi-star-fill "> </i>
+                            <small class="">CRIAR CUPOM</small>
+                            
+                        </a>
                     </div>
+                    
                 </div>
 
             </div>
@@ -414,7 +411,7 @@
         <div class="container  shadow-lg my-3">
             <div class="row p-3 ">
                 <div class="col p-5">
-                    <h3 class="text-warning" style="font-size: 22px;"><li>Termos de Responsabilidade</li></h3>
+                    <h3 class="text-warning form-text" style="font-size: 22px;"><li>Termos de Responsabilidade</li></h3>
                     <div class="row">
                         <div class="termos form-check">
                             <input class="form-check-input" type="checkbox" value="" id="check-termos">
@@ -441,18 +438,21 @@
             <div class="my-5 p-2">
                 <h3 class="text-center text-dark opacity-50">Tudo Pronto Para o Start?</h3>
                 <hr>
-                <div class="row align-content-center d-flex col my-4 text-center">
-                    <div class="col">
-                        <button class="btn btn-primary p-2 col-2">
-                            <i class="bi-rocket-takeoff ">  Publicar </i>
+                <div class="terms-btn d-flex my-4 col row">
+                    <div class="container p-2 gap-2 mt-3 d-flex flex-md-column flex-lg-row flex-xxl-row flex-sm-column col-sm-8  col-md-5 col-lg-8">
+                        <button class="btn btn-primary mb-2 form-control">
+                            <i class="bi-rocket-takeoff"></i>
+                            <span>Publicar</span>
                             
                         </button>
-                        <button class="btn btn-primary p-2">
-                            <i class="bi-eye"> Quero Ver Primeiro</i>
+                        <button class="btn btn-primary mb-2 form-control">
+                            <i class="bi-eye"></i>
+                            <span>Quero Ver Primeiro</span>
 
                         </button>
-                        <button class="btn btn-primary">
-                            <i class="bi-save"> Salvar Evento</i>
+                        <button class="btn btn-primary mb-2 form-control">
+                            <i class="bi-save"></i>
+                            <span>Salvar Evento</span>
 
                         </button>
 

@@ -1,4 +1,4 @@
-// const inputfile = 
-// document.querySelector("#inputgroupfile");
-// const pictureImage = 
-// document.querySelector("")
+const inputfile = 
+document.querySelector("#inputimg");
+const pictureImage = 
+document.querySelector("")

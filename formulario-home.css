@@ -178,7 +178,7 @@ form h3{
     margin-top: 50px;
 }
 
-#inputgroupfile{
+#inputimg{
     display: none;
     cursor: pointer;
 }
@@ -241,6 +241,21 @@ form h3{
     color: black;
 }
 
+.h-ingresso{
+    min-height: 300px;
+    max-height: 2000px;
+}
+.criar-ingresso{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-items: center;
+    align-items: start;
+    min-height: 200px;
+    max-height: 1200px;
+    justify-content: space-around;
+}
+
 .criar-tkt{
     background-color:whitesmoke;
     
@@ -289,7 +304,20 @@ form h3{
     cursor: pointer;
 }
 
+
+.cont-fim{
+    min-height: 400px;
+    max-height: 1000px;
+}
+.terms-btn{
+    border: 1px solid black;
+    min-height: 100px;
+    max-height: 1000px;
+}
+
 /* PUBLICAR - VISUALIZAR - SALVAR */
+
+
 
 
 
