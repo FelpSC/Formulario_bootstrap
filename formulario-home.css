@@ -47,6 +47,10 @@ nav{
     flex-wrap: wrap;
     
 }
+
+.navbar-nav{
+    overflow-y: scroll;
+}
 .navbar-nav a{
     font-size: 14px;
     color: white;
