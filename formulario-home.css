@@ -48,9 +48,8 @@ nav{
     
 }
 
-.navbar-nav{
-    overflow-y: scroll;
-}
+
+
 .navbar-nav a{
     font-size: 14px;
     color: white;
@@ -72,6 +71,9 @@ nav{
     background-color: white;
     color: white;
 
+}
+.dropdown-menu a{
+    color: black;
 }
 .dropdown-menu a:hover{
     color: white;
