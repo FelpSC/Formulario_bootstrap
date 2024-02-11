@@ -40,6 +40,11 @@ nav{
     border-radius: 6px;
 }
 
+ul .form-control{
+    background-color: #444;
+    color: white;
+    border: none;
+}
 
 .container-card{
     display: flex;
@@ -47,8 +52,18 @@ nav{
     
 }
 
+.navbar-collapse a::before{
+    content: " ";
+    width: 20px;
+}
 
-
+.navbar-nav a:hover{
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    transition: 300ms;
+}
 .navbar-nav a{
     font-size: 14px;
     color: white;

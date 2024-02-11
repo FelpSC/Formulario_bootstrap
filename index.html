@@ -18,12 +18,12 @@
             </button>
             <div class="collapse navbar-collapse col ms-auto" style="background-color: #444;" id="menuNavbar">
                 <ul class="navbar-nav gap-4 col">
-                        <li><a href="#" class=""><b>Inicio</b></a></li>
-                        <li><a href="#" class=""> Eventos</a></li>
-                        <li><a href="#" class=""> Reservas</a></li>
-                        <li><a href="#" class=""> Relatórios</a></li>
+                        <li><a href="#" class="form-control"><b>Inicio</b></a></li>
+                        <li><a href="#" class="form-control"> Eventos</a></li>
+                        <li><a href="#" class="form-control"> Reservas</a></li>
+                        <li><a href="#" class="form-control"> Relatórios</a></li>
                             <div class="nav-btn dropdown ms-lg-auto ms-md-auto"> 
-                                <button class="btn btn-secondary dropdown-toggle border-0 text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn  dropdown-toggle border-0 text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Menu
                                 </button>
                                 <div class="dropdown-menu ms-auto">
@@ -47,14 +47,8 @@
                     </ul>
             </div>
         </div>
-            
         
-                <!-- Menu -->
-                
-                
-                
-            
-                
+        
         </div>
     </nav>
     <h1 class=" text-center my-4 p-1 text-dark opacity-50">Já Pensou no Próximo Evento?</h1>
@@ -271,51 +265,72 @@
                             <!-- INFO - DATA/HORA -->
 
                             <div class="hora_data col container justify-content-center p-4 my-4">
-                                <div class="display-inicio row">
-                                    <div class="col p-2">
+                                <div class="col row justify-content-center">
+                                    <div class="col-lg-3 col-sm-5 p-2">
                                         <p>Data de Inicio</p>
-                                        <label for="datainicio">
-                                            <div class="input-group">
-                                                <input type="tel" id="datainicio" placeholder="Data" class="form-control">
+                                        <label for="data" class="input-group">
+                                                <input type="text" id="data" placeholder="Data" maxlength="10" class="form-control" value>
                                                 <i class="bi-calendar input-group-text"></i>
-                                            </div>
                                         </label>
                                     </div>
 
-                                    <div class="col p-2">
+                                    <div class="col-lg-3 col-sm-5 p-2">
                                         <p>Hora De inicio</p>
-                                        <label for="horainicio">
-                                            <div class="input-group">
-                                                <input type="tel" id="horainicio" placeholder="Hora" maxlength="5" class="form-control">
+                                        <label for="hora" class="input-group">
+                                                <input type="text" id="hora" placeholder="Hora" maxlength="5" class="form-control" value>
                                                 <i class="bi-clock input-group-text"></i>
-                                            </div>
                                         </label>
                                     </div>
                                 </div>
+                                <hr>
 
-                                <div class="display-fim row">
-                                    <div class="col p-2">
+                                <div class="col row justify-content-center">
+                                    <div class="col-lg-3 col-sm-5 p-2">
                                         <p>Data de Encerramento</p>
-                                        <label for="dataencerramneto">
-                                            <div class="input-group">
-                                                <input type="tel" id="dataencerramento" placeholder="Data" class="form-control">
+                                        <label for="data" class="input-group">
+                                                <input type="text" id="data" placeholder="Data" maxlength="10" class="form-control" value>
                                                 <i class="bi-calendar input-group-text"></i>
-                                            </div>
                                         </label>
                                     </div>
 
-                                    <div class="col p-2">
+                                    <div class="col-lg-3 col-sm-5 p-2">
                                         <p>Hora de Encerramento</p>
-                                        <label for="horaencerramento">
-                                            <div class="input-group">
-                                                <input type="datetime" maxlength="5" id="horaencerramento" accept="number" placeholder="Hora" class="form-control">
+                                        <label for="hora" class="input-group">
+                                                <input type="text" maxlength="5" id="hora" accept="number" placeholder="Hora" class="form-control">
                                                 <i class="bi-clock input-group-text"></i>
-                                            </div>
                                         </label>
                                     </div>
 
                                 </div>
                             </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                        
+                                    const inputs = document.querySelectorAll('#data');
+                        
+                                    inputs.forEach(function(input) {
+                                        input.addEventListener('input', function(event) {
+                                            let value = event.target.value.replace(/\D/g, '').substring(0, 8);
+                            
+                                            if (value.length > 4) {
+                                                value = value.replace(/(\d{2})(\d{2})(\d{4})/, '$1/$2/$3');
+                            
+                                            } else if (value.length > 2){
+                                                value = value.replace(/(\d{2})(\d{2})/, '$1/$2');
+                            
+                                            }
+                            
+                                            event.target.value = value;
+                                
+                                        });
+                                    });
+                                });
+                                
+                                // document.addEventListener("DOMContentLoaded", function(){
+                                //     const inputs
+                                // })
+                        
+                            </script>
 
 
                         </div>
