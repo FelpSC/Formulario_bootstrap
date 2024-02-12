@@ -65,11 +65,11 @@
                             <hr>
                             <form>
                                 <div class="local-opt mb-2">
-                                    <label class="form-label p-2 text-dark">Selecione um Local Pré-Definido</label>
+                                    <label for="local" class="form-label p-2 text-dark">Selecione um Local Pré-Definido</label>
                                     <select class="form-select" id="local" name="local">
-                                        <option value="">Novo Local</option>
-                                        <option value="">Não Definido</option>
-                                        <option value=""></option>
+                                        <option value="" id="opt-1">Novo Local</option>
+                                        <option value="" id="opt-2">Não Definido</option>
+                                        <option value="" id="opt-2"></option>
                                     </select>
                                 </div>
 
@@ -77,49 +77,49 @@
 
                                 <div class="mb-2" > 
                                     <h3  class="ms-2">Nome da Casa/Local</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-nome" class="form-label"></label>
+                                    <input type="text" id="local-nome" class="form-control">
                                 </div>
                                 
                                 <div class="mb-2">
                                     <h3  class="ms-2">CEP</h3>
-                                    <label for="" class="form-label" aria-required="true" aria-invalid="true"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-cep" class="form-label" aria-required="true" aria-invalid="true"></label>
+                                    <input type="text" id="local-cep" class="form-control">
                                 </div>
 
                                 <div class="mb-2">
                                     <h3  class="ms-2">Rua</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-rua" class="form-label"></label>
+                                    <input type="text" id="local-rua" class="form-control">
                                 </div>
 
                                 <div class="mb-2">
                                     <h3  class="ms-2">Número</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-numero" class="form-label"></label>
+                                    <input type="text" id="local-numero" class="form-control">
                                 </div>
 
                                 <div class="mb-2">
                                     <h3  class="ms-2">Complemento</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-complemento" class="form-label"></label>
+                                    <input type="text" id="local-complemento" class="form-control">
                                 </div>
 
                                 <div class="mb-2">
                                     <h3  class="ms-2">Bairro</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-bairro" class="form-label"></label>
+                                    <input type="text" id="local-bairro" class="form-control">
                                 </div>
 
                                 <div class="mb-2">
                                     <h3  class="ms-2">Cidade</h3>
-                                    <label for="" class="form-label"></label>
-                                    <input type="text" class="form-control">
+                                    <label for="local-cidade" class="form-label"></label>
+                                    <input type="text" id="local-cidade" class="form-control">
                                 </div>
 
                                 <div class="estados-opt mb-2">
-                                    <label for="estados" class="form-label text-black">Selecione um estado:</label>
-                                    <select class="form-select" id="estados" name="estados">
+                                    <label for="local-estados" class="form-label text-black">Selecione um estado:</label>
+                                    <select class="form-select" id="local-estados" name="estados">
                                     <option value="" class="text-muted">Selecione...</option>
                                     <option value="AC">Acre</option>
                                     <option value="AL">Alagoas</option>
@@ -178,7 +178,7 @@
                 <form class="col">
                     <div class="m-2">
                         <label for="nome-evento"><p>Insira o Titulo do Evento (Máx. 50 Caracteres)</p></label>
-                        <input type="text" class="form-control m-1" maxlength="51">
+                        <input type="text" id="nome-evento" class="form-control m-1" maxlength="51">
 
                     </div>
 
@@ -189,7 +189,7 @@
 
                             <div class="col-md-4">
                                 <small class="p-2">Logo</small>
-                                <label for="inputimg" class="img-logo picture">
+                                <label for="input-img" class="img-logo picture">
                                     <div class="text-center d-flex flex-column ">
                                         <i class="bi-image fs-1"></i>
                                         <small class="lh-5 picture_txt">A dimensão <span>recomendada é de 432 x 280</span>
@@ -198,12 +198,12 @@
                                         </small>
                                     </div>
                                 </label>
-                                <input type="file" name="picture-input" accept="image/*" id="inputimg">
+                                <input type="file" name="picture-input" accept="image/*" id="input-img">
                             </div>
 
                             <div class="col-md-5 col-lg-6 ">
                                 <small class="p-2">Capa</small>
-                                <label for="inputimg" class="img-capa picture">
+                                <label for="input-img" class="img-capa picture">
                                     <div class="text-center  d-flex flex-column">
                                         <i class="bi-image fs-1"></i>
                                         <small class="lh-5">A dimensão <span>recomendada é de 940 x 360</span>
@@ -214,7 +214,7 @@
 
                                     
                                 </label>
-                                <input type="file" name="picture-input" accept="image/*" id="inputimg">
+                                <input type="file" name="picture-input" accept="image/*" id="input-img">
 
                             </div>
 
@@ -227,8 +227,8 @@
                     <div class=" container descritivo p-2">
                         <div class="col">
                             <div class="my-4">
-                                <label for="descritivo" class="ms-2 p-2">Insira uma Descrição:</label>
-                                <textarea type="text" class="form-control"></textarea>
+                                <label for="descricao" class="ms-2 p-2">Insira uma Descrição:</label>
+                                <textarea type="text" id="descricao" class="form-control"></textarea>
                             </div>
 
                             <!-- INFO - CATEGORIAS -->
@@ -237,11 +237,11 @@
                                 <div class="row col-6 p-2">
                                     <label for="categoria-tipo">
                                         <small class="p-2">Categoria:</small>
-                                        <select name="tipo-evento" id="tipo_evento" class="form-select m-1">
-                                            <option value="" class="text-muted">Selecione</option>
-                                            <option value="Eventos">Eventos</option>
-                                            <option value="Shows">Shows</option>
-                                            <option value="Baladas">Baladas</option>
+                                        <select name="tipo-evento" id="categoria-tipo" class="form-select m-1">
+                                            <option value="" id=" " class="text-muted">Selecione</option>
+                                            <option value="Eventos" id="opt-evgentos">Eventos</option>
+                                            <option value="Shows" id="opt-show">Shows</option>
+                                            <option value="Baladas" id="opt-baladas">Baladas</option>
                                         </select>
                                     </label>
                                 </div>
@@ -250,7 +250,7 @@
                                     <label for="categoria-genero">
                                         <small class="p-2">Gênero:</small>
                                         <select name="tipo-evento" id="categoria-genero" class="form-select m-1">
-                                            <option value="" class="text-muted">Selecione</option>
+                                            <option value="" id=" " class="text-muted">Selecione</option>
                                             <option value="Eventos">Eventos</option>
                                             <option value="Shows">Shows</option>
                                             <option value="Baladas">Baladas</option>
@@ -303,6 +303,7 @@
 
                                 </div>
                             </div>
+
                             <script>
                                 document.addEventListener("DOMContentLoaded", function() {
                         
@@ -326,9 +327,22 @@
                                     });
                                 });
                                 
-                                // document.addEventListener("DOMContentLoaded", function(){
-                                //     const inputs
-                                // })
+                               document.addEventListener("DOMContentLoaded" , function(){
+                                    const inputhora = document.querySelectorAll('#hora');
+
+                                    inputhora.forEach(function(input){
+                                        input.addEventListener('input', function(even){
+                                            let value = event.target.value.replace(/\D/g, '').substring(0, 5);
+
+                                            if (value.length > 2){
+                                                value = value.replace(/(\d{2})(\d{2})/, '$1:$2');
+                                            } 
+
+                                            event.target.value = value;
+                                        })
+                                    })
+                                });
+
                         
                             </script>
 
