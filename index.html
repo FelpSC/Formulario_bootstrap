@@ -305,11 +305,14 @@
                             </div>
 
                             <script>
+
+                                // script para DATA
+
                                 document.addEventListener("DOMContentLoaded", function() {
                         
-                                    const inputs = document.querySelectorAll('#data');
+                                    const inputdata = document.querySelectorAll('#data');
                         
-                                    inputs.forEach(function(input) {
+                                    inputdata.forEach(function(input) {
                                         input.addEventListener('input', function(event) {
                                             let value = event.target.value.replace(/\D/g, '').substring(0, 8);
                             
@@ -327,11 +330,13 @@
                                     });
                                 });
                                 
+                                // script para HORA
+
                                document.addEventListener("DOMContentLoaded" , function(){
                                     const inputhora = document.querySelectorAll('#hora');
 
                                     inputhora.forEach(function(input){
-                                        input.addEventListener('input', function(even){
+                                        input.addEventListener('input', function(event){
                                             let value = event.target.value.replace(/\D/g, '').substring(0, 5);
 
                                             if (value.length > 2){
