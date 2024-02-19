@@ -205,7 +205,12 @@ form h3{
     margin-top: 50px;
 }
 
-#input-img{
+#input-img-capa{
+    display: none;
+    cursor: pointer;
+}
+
+#input-img-logo{
     display: none;
     cursor: pointer;
 }
