@@ -19,3 +19,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+const inputfile = document.querySelector('#input-img');
+const pictureImage = document.querySelector('bi-image');
+const pictureImageTxt = ('Escolha uma imagem');
+
+
+
+inputfile.addEventListener('change', function(e) {
+    const inputTarget = e.target;
+    console.log(inputTarget);
+    const file = inputTarget.files[0];
+
+    if (file){
+        const reader = new FileReader();
+        reader.addEvenrtListener('load', function(e) {
+            const readerTarget = e.target;
+
+            const img = document.createElement('img');
+            img.src = readerTarget.result;
+            img.classList.add('picture');
+
+            pictureImage.innerHTML = '';
+            pictureImage.appendChild(img);
+
+            
+        });
+
+        reader.readAsDataURL(file);
+
+    }else{
+        pictureImage.innerHTML = pictureImageTxt;
+    }
+    console.log(file);
+})
