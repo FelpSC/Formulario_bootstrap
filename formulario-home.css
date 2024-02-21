@@ -99,6 +99,38 @@ nav img{
     height: 40px;
 }
 
+
+
+/* ABA EXEMPLO */
+.aba-exemplo{
+    position: fixed;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom: 2px solid black;
+    color: white;
+    height: 120px;
+    width: 960px;
+    z-index: 10;
+}
+
+.aba-exemplo button{
+    border-radius: 20px;
+    padding: 7px;
+    width: 150px;
+}
+.aba-exemplo a{
+    font-size: 14px;
+    color: black;
+    font-weight: bold 400;
+    text-decoration: none;
+}
+
+.aba-exemplo button:hover{
+    color:cornflowerblue;
+
+
+}
+
 /* SUBTITULO */
 
 .subtitulo{
