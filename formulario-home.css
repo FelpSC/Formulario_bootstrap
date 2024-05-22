@@ -378,12 +378,12 @@ form h3{
     min-height: 100px;
     max-height: 1000px;
 }
-
-/* PUBLICAR - VISUALIZAR - SALVAR */
-
-
-
-
+.event-exemplo-div{
+    border-radius: 3px;
+}
+.event-exemplo-div a, button{
+    border-radius: 10px;
+}
 
 footer{
     margin-top: 49px;
