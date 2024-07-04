@@ -24,7 +24,8 @@ EMENTTOS NO TOPO
 
 nav{
     height: 60px;
-    background-color: #444;
+    background-color: #000000;
+    /* background-color: #444; COR ANTERIOR */
 
    
 }
@@ -41,7 +42,8 @@ nav{
 }
 
 ul .form-control{
-    background-color: #444;
+    /* background-color: #444; COR ANTERIOR */
+    background-color: #000000;
     color: white;
     border: none;
 }
