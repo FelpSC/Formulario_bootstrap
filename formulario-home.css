@@ -46,6 +46,7 @@ ul .form-control{
     background-color: #000000;
     color: white;
     border: none;
+    border-radius: 10px;
 }
 
 .container-card{
@@ -61,10 +62,8 @@ ul .form-control{
 
 .navbar-nav a:hover{
     border-radius: 6px;
-    background-color: #333;
+    background-color: #333333;
     color: white;
-    font-size: 15px;
-    transition: 300ms;
 }
 .navbar-nav a{
     font-size: 14px;
@@ -72,7 +71,7 @@ ul .form-control{
     text-decoration: none;
 }
 .nav-btn{
-    color: #fff;
+    color: red;
 }
 .nav-btn:hover{
     border-radius: 6px;
@@ -80,13 +79,40 @@ ul .form-control{
 }
 
 .navbar-toggler-icon{
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0.5px solid gray;
 
 }
-.navbar-toggler{
-    background-color: white;
-    color: white;
 
+.icon-bar{
+    margin:4px;
+    background-color: white;
+    width: 18px;
+    height: 1px;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 1px;
+    padding: 2px;
+    
+}
+
+.navbar-toggler{
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    width: 22px;
+    border: 1px solid gray;
+
+}
+
+.navbar-toggler:hover{
+    background-color: #333333;
 }
 .dropdown-menu a{
     color: black;
