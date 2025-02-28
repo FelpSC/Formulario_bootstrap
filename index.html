@@ -198,10 +198,26 @@
             
                 <form class="col">
                     <div class="m-2">
-                        <label for="nome-evento"><p>Insira o Titulo do Evento (Máx. 50 Caracteres)</p></label>
-                        <input type="text" id="nome-evento" class="form-control m-1" maxlength="51">
+                        <label for="nome-evento"><p id="maxCaractere">Insira o Titulo do Evento (Máx. <span id="numeroCaractere" class="text-danger">50</span> Caracteres)</p></label>
+                        <input type="text" id="inputNome-Evento" class="form-control m-1" maxlength="50">
+                        <small id="valor-input"></small>
+                        
 
                     </div>
+                    
+                        <!-- Função para contar a quantidade de caracteres disponiveis no input de titulo -->
+                        <script>
+                        
+                            
+                            function attNumero (){
+                                var valorInput = document.getElementById('inputNome-Evento').value;
+                                document.getElementById('numeroCaractere').textContent = 50 - valorInput.length;
+                                
+                            }
+                            document.getElementById('inputNome-Evento').oninput = attNumero;
+
+                        </script>
+                   
 
                      <!-- INFO - IMAGENS -->
 
