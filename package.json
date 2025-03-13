@@ -2,7 +2,8 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "select2": "^4.1.0-rc.0"
   },
   "name": "formulario_bootstrap",
   "version": "1.0.0",
