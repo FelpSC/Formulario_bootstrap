@@ -177,6 +177,14 @@ form h3{
     
 }
 
+.local-opt select{
+    font-size: 12px;
+}
+.estados-opt select{
+    font-size: 12px;
+
+}
+
 /* INFORMAÇÕES BASICAS */
 
 .info-basics{
@@ -238,7 +246,10 @@ form h3{
     cursor: pointer;
 }
 .picture i{
-    margin-top: 50px;
+    margin: 20;
+    padding: 8px;
+   
+    
 }
 .picture small{
     font-size: 12px;
@@ -256,6 +267,18 @@ form h3{
     cursor: pointer;
 }
 
+
+.btn-remover{
+    border-radius: 6px;
+    background-color:cornflowerblue;
+    color: white;
+    padding: 6px;
+    font-size: 12px;
+    margin-top: 10px;
+
+}
+
+
 .descritivo textarea{
     height: 200px;
 }
@@ -269,13 +292,7 @@ form h3{
 
 }
 
-.local-opt select{
-    font-size: 12px;
-}
-.estados-opt select{
-    font-size: 12px;
 
-}
 .hora_data p{
     font-size: 12px;
 

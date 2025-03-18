@@ -100,7 +100,7 @@
                                 <div class="mb-2">
                                     <h3  class="ms-2">CEP</h3>
                                     <label for="local-cep" class="form-label" aria-required="true" aria-invalid="true"></label>
-                                    <input type="text" id="cep" class="form-control" required>
+                                    <input type="text" id="cep" class="form-control"+.>
                                 </div>
 
                                 <div class="mb-2">
@@ -219,66 +219,79 @@
 
                      <div class="container py-5 shadow-sm">
                         <div class="info-img row gap-2 my-4 d-flex justify-content-around flex-sm-column flex-lg-row">
-                            <div class="col-md-4">
+                            <div class="col-md-10 col-lg-5">
                                 <small class="p-2">Logo</small>
+                                
                                 <label for="input-img-logo" class="img-logo picture text-center d-flex flex-column ">
-                                        <i class="bi-image fs-1" id="logo-image"></i>
+                                    <i class="bi-image fs-1 " id="logo-image"></i>
                                         <small class="lh-5 picture_txt">A dimensão <span>recomendada é de 432 x 280</span>
                                             <span>Formato JPEG ou PNG</span>.
                                             Imagens com dimensões diferentes serão redimensionadas.
                                         </small>
                                 </label>
                                 <input type="file" name="picture-input" accept="image/*" id="input-img-logo">
+                                <button type="button" class="btn-remover" id="btn-remove-logo">Remover</button>
                                 
                             </div>
-                    
-                            <div class="col-md-5 col-lg-6 ">
+                            
+                            <div class="col-md-10 col-lg-6">
                                 <small class="p-2">Capa</small>
-                                <label for="input-img-capa" class="img-capa picture">
-                                    <div class="text-center  d-flex flex-column">
+                                <label for="input-img-capa" class="img-capa picture text-center d-flex flex-column">
                                         <i class="bi-image fs-1" id="capa-image"></i>
                                         <small class="lh-5">A dimensão <span>recomendada é de 940 x 360</span>
                                             <span>Formato JPEG ou PNG</span>.
                                             Imagens com dimensões diferentes serão redimensionadas.
                                         </small>
-                                    </div>
                                 </label>
                                 <input type="file" name="picture-input" accept="image/*" id="input-img-capa">
+                                <button type="button" class="btn-remover" id="btn-remove-capa">Remover</button>
                             </div>
                         </div>
                     </div>
                     
                     <script>
+
                         const inputfileLogo = document.querySelector('#input-img-logo');
                         const inputfileCapa = document.querySelector('#input-img-capa');
                         const logoImage = document.querySelector('#logo-image');
                         const capaImage = document.querySelector('#capa-image');
-                        const pictureImageTxt = 'Escolha uma imagem';
+                        const inputImgVazio = 'Escolha uma imagem';
                     
                         inputfileLogo.addEventListener('change', function(e) {
                             previewImage(e.target, logoImage);
+                            $('.img-logo small').remove();
+                            $('#logo-image').removeClass('bi-image fs-1');
                         });
                     
                         inputfileCapa.addEventListener('change', function(e) {
                             previewImage(e.target, capaImage);
+                            $('.img-capa small').remove();
+                            $('#capa-image').removeClass('bi-image fs-1');
                         });
-                    
-                        function previewImage(input, imageElement) {
+                        
+
+                        function previewImage(input, imageElement){
+
                             const file = input.files[0];
-                            if (file) {
+
+                            if (file){
                                 const reader = new FileReader();
-                                reader.addEventListener('load', function(e) {
-                                    const img = document.createElement('img');
-                                    img.src = e.target.result;
-                                    img.classList.add('picture');
-                                    imageElement.innerHTML = '';
-                                    imageElement.appendChild(img);
-                                });
+                                reader.onload = function(e){
+                                    const $img = $('<img>').attr('src', e.target.result).addClass('picture');
+
+                                    $(imageElement).empty().append($img);
+
+                                };
                                 reader.readAsDataURL(file);
-                            } else {
-                                imageElement.innerHTML = pictureImageTxt;
+                            }else{
+                                $(imageElement).html(inputImgVazio);
                             }
+                             
                         }
+
+
+                   
+
                     </script>
 
                      <!-- INFO - DESCRIÇÃO E CLASSIFICAÇÃO -->
