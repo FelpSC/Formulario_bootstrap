@@ -323,14 +323,13 @@ form h3{
 /* INGRESSOS / TICKETS */
 
 .cont-ingressos{
-    min-height: 1000px;
-    max-height: 3000px;
+    height: auto;
 }
 
 .ingressos{
     max-height: 3000px;
 }
-.ingressos a{
+.ingressos button{
     border: 1px solid black;
     height: 160px;
     width: 200px;

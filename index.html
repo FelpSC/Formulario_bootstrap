@@ -96,7 +96,7 @@
                                     
                                     <h3  class="ms-2">Nome da Casa/Local</h3>
                                     <label for="local-nome" class="form-label"></label>
-                                    <input type="text" id="local-nome" class="form-control inputs">
+                                    <input type="text" id="local-nome" maxlength="25" class="form-control inputs">
                                     <span class="form-valid">Teste</span>
                                 </div>
                                 <!-- CAMPO 1  -->
@@ -110,7 +110,7 @@
                                 <div class="mb-2">
                                     <h3  class="ms-2">Rua</h3>
                                     <label for="local-rua" class="form-label"></label>
-                                    <input type="text" id="local-rua" class="form-control inputs">
+                                    <input type="text" maxlength="20" id="local-rua" class="form-control inputs">
                                     <span class="form-valid">Teste</span>
                                 </div>
                                 <!-- CAMPO 3  -->
@@ -124,21 +124,21 @@
                                 <div class="mb-2">
                                     <h3  class="ms-2">Complemento</h3>
                                     <label for="local-complemento" class="form-label"></label>
-                                    <input type="text" id="local-complemento" class="form-control inputs">
+                                    <input type="text" maxlength="20" id="local-complemento" class="form-control inputs">
                                     <span class="form-valid">Teste</span>
                                 </div>
                                 <!-- CAMPO 5  -->
                                 <div class="mb-2">
                                     <h3  class="ms-2">Bairro</h3>
                                     <label for="local-bairro" class="form-label"></label>
-                                    <input type="text" id="local-bairro" class="form-control inputs">
+                                    <input type="text" maxlength="10" id="local-bairro" class="form-control inputs">
                                     <span class="form-valid">Teste</span>
                                 </div>
                                 <!-- CAMPO 6  -->
                                 <div class="mb-2">
                                     <h3  class="ms-2">Cidade</h3>
                                     <label for="local-cidade" class="form-label"></label>
-                                    <input type="text" id="local-cidade" class="form-control inputs">
+                                    <input type="text" maxlength="18" id="local-cidade" class="form-control inputs">
                                     <span class="form-valid">Teste</span>
                                 </div>
 
@@ -211,26 +211,80 @@
         <script>
 
             // const form = $('#form');
+
+
+            // MENSAGENS DO FORMULÁRIO
+
+            const mensagens =
+        
+            [ 
+                "Precisa haver mais de 3 caracteres", // 
+                "CEP inválido: precisa haver 8 caracteres",
+                "Precisa haver mais de 3 carcateres"
+            ];
+            
+
             const campos = $('.inputs').on('focus input', validaForm);
             const spans = $('.form-valid');
 
-            function spanErro(){
-                $(spans.get(0)).css('display', 'block');
-                $(spans.get(0)).text('Precisa haver mais de 3 caracteres');
+            function spanErro(index){
+                $(spans.get(index)).css('display', 'block');
+                $(spans.get(index)).text(mensagens[index]);
                 
             }
         
 
-            function validaForm(){
-                    if($(campos.get(0)).val().length < 3){
-                        spanErro(0);
+            function validaForm(index){
+                        const campo = $(campos.get(index))
+                        const valor = $(campo).val();
+                        
+                        let criterio;
 
-                    }else{
-                        $(spans.get(0)).css('display', 'none');
-                    }
+
+                        // Verifica se o campo possui o critério indicado, caso não possua, aparece a mensagem
+
+                        switch (index){
+                            case 0: // NOME CASA
+                                criterio = valor.length > 3;
+                                break;
+                            case 1: // CEP
+                                criterio = valor.length > 8;
+                                break;
+                            case 2: // RUA
+                                criterio = valor.length > 8;
+                                break;
+                            case 3: // NÚMERO
+                                criterio = valor.length > 8;
+                                break;
+                            case 4: // COMPLEMENTO
+                                criterio = valor.length > 8;
+                                break;
+                            case 5: // BAIRRO
+                                criterio = valor.length > 8;
+                                break;
+                            case 6: // CIDADE
+                                criterio = valor.length > 8;
+                                break;
+                        }
+
+                        if(!criterio){
+                            spanErro(index);
+                        }else{
+                            $(spans.get(index)).css('display', 'none');
+                        }
+
+                    
+            }
+                // VALIDAR CADA CAMPO DE INPUT DO FORMULÁRIO
+
+                campos.each(function(index){
+                       $(this).on('input', function(){
+                        validaForm(index);
+                       });
+                    });
                 
             
-            }
+            
 
         </script>
 
@@ -466,7 +520,7 @@
         </div>
 
         <!-- INGRESSOS / VALORES -->
-<!-- 
+
         <div class="cont-ingressos container-fluid col-12 shadow-lg my-5 p-2">
 
             <div class="h-ingresso row p-2 mx-2">
@@ -479,22 +533,22 @@
                 <div class="ingressos container my-4 pe-3 shadow-sm">
                     <h3 class="text-center text-dark opacity-50">Ingresso | Cupom</h3>
                     <div class="criar-ingresso container row d-flex flex-wrap py-4">
-                        <a href="" class="criar-tkt text-center p-4 row">
+                        <button type="button" class="criar-tkt text-center p-4 row">
                             <i class="bi-ticket-detailed-fill"> </i>
                             <small>CRIAR INGRESSO</small>
-                        </a>
+                        </button>
 
-                        <a href="" class="criar-tkt p-4  text-center row">
+                        <button type="button" class="criar-tkt p-4  text-center row">
                             <i class="bi-star-fill "> </i>
                             <small class="">CRIAR CUPOM</small>
                             
-                        </a>
+                        </button>
                     </div>
                     
                 </div>
 
             </div>
-                <hr class="my-4"> -->
+        </div>
                 <!-- INGRESSOS - TABELA -->
 
             <!-- <div class="tkt-table container shadow-sm">
@@ -644,6 +698,112 @@
         </footer>
     </div>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfXwYcigPTDMFtoXWkiM9VZXs7WvjwJM4&libraries=places&callback=initMap" async defer type="295b96b7ad1a9faabfee6188-text/javascript"></script>
+    <script>
+    
+        tinymce.init({
+            promotion: false,
+            branding: false,
+            relative_urls: false,
+            convert_urls: false,
+            selector: '#descricao', // Altere este valor de acordo com o seu HTML
+            language: 'pt_BR',
+            plugins: [
+                'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+                'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+                'media', 'table', 'emoticons', 'template', 'help'
+            ],
+            toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | fullscreen | ' +
+                'forecolor backcolor emoticons | help',
+            menubar: 'favs file edit view insert format tools table help',
+            content_css: 'css/content.css'
+        });
+    
+        function initMap() {
+    
+            var input = document.getElementById('nome');
+    
+    
+            var autocomplete = new google.maps.places.Autocomplete(input);
+    
+    
+            // Set the data fields to return when the user selects a place.
+            autocomplete.setFields(
+                ['place_id','url','formatted_phone_number','address_components','formatted_address', 'geometry', 'icon', 'name']);
+    
+            autocomplete.addListener('place_changed', function() {
+    
+              var place = autocomplete.getPlace();
+              if (!place.geometry) {
+                // User entered the name of a Place that was not suggested and
+                // pressed the Enter key, or the Place Details request failed.
+                window.alert("No details available for input: '" + place.name + "'");
+                return;
+              }
+             console.log(place);
+              $('#nome').val(place.name);
+              $.each(place.address_components, function (i, address_component) {
+                 if (address_component.types[0] == "administrative_area_level_2") {
+                     let existe = false;
+                    $('#select_cidade option').each(function() {
+                         if ($(this).text() == address_component.short_name) {
+                              existe = true;
+                              $('#select_cidade').val($(this).val()).trigger('change');
+                          }
+                      });
+                      if (!existe) { 
+                          var newStateVal = address_component.short_name;
+                          var newState = new Option(newStateVal, newStateVal, true, true);
+                          $("#select_cidade").append(newState).trigger('change');
+                          $.each(place.address_components, function (i, address_component) {
+                              if (address_component.types[0] == "administrative_area_level_1") {
+                                  $('#estado').val(address_component.short_name);
+                              }
+                          });
+                      }
+                 } 
+                 if (address_component.types[0] == "street_number") $('#numero').val(address_component.short_name);
+                 if (address_component.types[0] == "route") $('#endereco').val(address_component.short_name);
+                 if (address_component.types[0] == "sublocality_level_1") $('#bairro').val(address_component.short_name);
+                 if (address_component.types[0] == "postal_code") $('#cep').val(address_component.short_name);
+                 if (address_component.types[0] == "subpremise") $('#complemento').val(address_component.short_name);
+                     
+              });
+                  
+              console.log(place);
+              $('#latitude').val(place.geometry.location.lat());
+              $('#longitude').val(place.geometry.location.lng());
+              $('#telefone').val(place.formatted_phone_number);
+              $('#gmaps_place_id').val(place.place_id);
+              
+              $('#iframe iframe').attr('src',"https://www.google.com/maps/embed/v1/place?key=AIzaSyBfXwYcigPTDMFtoXWkiM9VZXs7WvjwJM4&q=place_id:"+place.place_id);
+              $('#iframe').show();
+              
+              $('#gmaps').val("https://www.google.com/maps/embed/v1/place?key=AIzaSyBfXwYcigPTDMFtoXWkiM9VZXs7WvjwJM4&q=place_id:"+place.place_id);
+            });
+        }
+            
+        $(document).ready(function() {
+            
+            var SPMaskBehavior = function (val) {
+            return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+            spOptions = {
+            onKeyPress: function(val, e, field, options) {
+                field.mask(SPMaskBehavior.apply({}, arguments), options);
+                },
+                clearIfNotMatch:true
+            };
+            $('#telefone').mask(SPMaskBehavior, spOptions);
+            
+            $('#tipo,#select_cidade').select2({tags:true});
+            
+        
+        });
+    </script>
+    
+
 
 
 </body>
@@ -655,7 +815,7 @@
     <script src="https://kit.fontawesome.com/115e670b93.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 
-    <script>
+    <script> 
         $(document).ready(function(){
 
             // CASO QUEIRA AJUSTAR ALGUM SELECT:
@@ -666,10 +826,19 @@
             $('#cep').mask('00000-000');
             $('#data').mask('00/00/0000');
             $('.hora').mask('00:00');
+            $('#local-numero').mask('0000');
             $('#valorReais').mask("#.##0,00", {reverse: true});
 
         });
     </script>
+
+    <script>
+        
+
+        
+    </script>
+
+
 
 
 </html> 
