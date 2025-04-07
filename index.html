@@ -117,7 +117,7 @@
                                 <div class="mb-2">
                                     <h3  class="ms-2">Número</h3>
                                     <label for="local-numero" class="form-label"></label>
-                                    <input type="text" id="local-numero" accept="number" maxlength="4" class="form-control inputs">
+                                    <input type="text" accept="number" maxlength="4" class="form-control inputs local-numero">
                                     <span class="form-valid">Teste1</span>
                                 </div>
                                 <!-- CAMPO 4  -->
@@ -826,7 +826,7 @@
             $('#cep').mask('00000-000');
             $('#data').mask('00/00/0000');
             $('.hora').mask('00:00');
-            $('#local-numero').mask('0000');
+            $('.local-numero').mask('0000');
             $('#valorReais').mask("#.##0,00", {reverse: true});
 
         });
