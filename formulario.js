@@ -1,55 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-                        
-    const inputs = document.querySelectorAll('#data');
+let numero = '192019';
 
-    inputs.forEach(function(input) {
-        input.addEventListener('input', function(event) {
-            let value = event.target.value.replace(/\D/g, '').substring(0, 8);
+console.log(numero.length);
 
-            if (value.length > 4) {
-                value = value.replace(/(\d{2})(\d{2})(\d{4})/, '$1/$2/$3');
+if (numero.length >= 6){
+    numero = 'Testes E teste';
+}
 
-            } else if (value.length > 2){
-                value = value.replace(/(\d{2})(\d{2})/, '$1/$2');
+console.log(numero.split(" "));
 
-            }
-
-            event.target.value = value;
-
-        });
-    });
-});
-
-const inputfile = document.querySelector('#input-img');
-const pictureImage = document.querySelector('bi-image');
-const pictureImageTxt = ('Escolha uma imagem');
-
-
-
-inputfile.addEventListener('change', function(e) {
-    const inputTarget = e.target;
-    console.log(inputTarget);
-    const file = inputTarget.files[0];
-
-    if (file){
-        const reader = new FileReader();
-        reader.addEvenrtListener('load', function(e) {
-            const readerTarget = e.target;
-
-            const img = document.createElement('img');
-            img.src = readerTarget.result;
-            img.classList.add('picture');
-
-            pictureImage.innerHTML = '';
-            pictureImage.appendChild(img);
-
-            
-        });
-
-        reader.readAsDataURL(file);
-
-    }else{
-        pictureImage.innerHTML = pictureImageTxt;
-    }
-    console.log(file);
-})
+if (numero.includes(" ")){
+    numero = 5; 
+}else{
+    numero = 'isso ai';
+} 
+console.log(numero * 2);
